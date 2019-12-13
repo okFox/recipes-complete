@@ -12,9 +12,9 @@ describe('event routes', () => {
     connect();
   });
 
-  beforeEach(() => {
-    return mongoose.connection.dropDatabase();
-  });
+  // beforeEach(() => {
+  //   return mongoose.connection.dropDatabase();
+  // });
 
   let recipe;
   let event;
@@ -31,7 +31,7 @@ describe('event routes', () => {
         'bake for 10 minutes'
       ],
     });
-
+console.log(recipe);
     event = await Event.create({
       recipeId: recipe._id,
       dateOfEvent: new Date(),
