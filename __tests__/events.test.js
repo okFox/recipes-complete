@@ -58,6 +58,9 @@ describe('event routes', () => {
           _id: expect.any(String),
           recipeId: recipe._id.toString(),
           dateOfEvent: expect.any(String),
+          day: event.day,
+          month: event.month,
+          year: event.year,
           notes: 'It went well',
           rating: 4,
           __v: 0
@@ -86,10 +89,13 @@ describe('event routes', () => {
     return request(app)
       .get(`/api/v1/events/${event._id}`)
       .then(res => {
-        expect(res.body).toEqual({
+        expect(res.body).toMatchObject({
           _id: expect.any(String),
           recipeId: JSON.parse(JSON.stringify(recipe)),
           dateOfEvent: expect.any(String),
+          day: event.day,
+          month: event.month,
+          year: event.year,
           notes: 'It was good',
           rating: 5,
           __v: 0
@@ -106,6 +112,9 @@ describe('event routes', () => {
           _id: expect.any(String),
           recipeId: recipe._id.toString(),
           dateOfEvent: expect.any(String),
+          day: event.day,
+          month: event.month,
+          year: event.year,
           notes: 'It was good',
           rating: 4,
           __v: 0
@@ -121,6 +130,9 @@ describe('event routes', () => {
           _id: expect.any(String),
           recipeId: recipe._id.toString(),
           dateOfEvent: expect.any(String),
+          day: event.day,
+          month: event.month,
+          year: event.year,
           notes: 'It was good',
           rating: 5,
           __v: 0
