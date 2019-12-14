@@ -9,3 +9,8 @@ app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log(`Started on ${PORT}`);
 });
+
+//routing
+app.get('/', (req, res) => {
+  res.render('main');
+});
