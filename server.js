@@ -10,7 +10,4 @@ app.listen(PORT, () => {
   console.log(`Started on ${PORT}`);
 });
 
-//routing
-app.get('/', (req, res) => {
-  res.render('main');
-});
+
