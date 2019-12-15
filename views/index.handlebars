@@ -1,0 +1,8 @@
+
+<ul>
+    <ul>
+      {{#each recipes}}
+      <li><a href='https://recipes-acl.herokuapp.com/api/v1/recipes/{{this._id}}'>{{this.name}}</a></li>
+      {{/each}}
+    </ul>
+</ul>
